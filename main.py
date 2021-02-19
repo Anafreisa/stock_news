@@ -6,10 +6,10 @@ COMPANY_NAME = "Tesla Inc"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-STOCK_API_KEY = "SCDHCXU431CRGQWL"
-NEWS_API_KEY = "92489536df4b4f569bd361e487efed84"
-account_sid = "AC90eb1f16a02b2c8106bf0414348307f1"
-auth_token = "0e27d5cd86e2f38b1b04c589db26bb05"
+STOCK_API_KEY = ALPHA VANTAGE API KEY
+NEWS_API_KEY = NEWS API KEY
+account_sid = YOUR ACCOUNT SID
+auth_token = YOUR TOKEN
 
 alpha_vantage_parameters = {
     "function": "TIME_SERIES_DAILY",
@@ -53,7 +53,7 @@ if abs(price_variation) > 5:
             .create(
             body=f"{STOCK_NAME}: {signal}{price_variation}%\n\nHeadline: {articles_list[0]}\n\n"
                  f"Brief: {articles_list[1]}",
-            from_="+16504472856",
-            to="+5561996879742"
+            from_= TWILIO NUMBER,
+            to= TWILIO VERIFIED NUMBER
         )
         print(message.status)
